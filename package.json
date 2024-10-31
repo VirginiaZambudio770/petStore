@@ -1,5 +1,12 @@
 {
   "devDependencies": {
     "testcafe": "^3.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "scripts":{
+    "test:smoke": "testcafe firefox --filter 'Smoke' pom/tests/",
+    "test:regression": "testcafe firefox --filter 'Regression' pom/tests/"
   }
 }
