@@ -9,12 +9,12 @@ fixture `Login tests`
         await homePage.clickOnSignInButton()
     })
 
-test.meta('Smoke','Regression')('Login', async t => {
+test.meta({type:'Smoke', category:'Regression'})('Login', async t => {
     await loginPage.login(CREDENTIALS.VALID.USERNAME,CREDENTIALS.VALID.PASSWORD)
     await t.expect(myAccount.signOutButtonExists).ok('The signOut button was not found.')
 })
 
-test.meta('Regression')('Login with invalid username and password', async t => {
+test.meta({type:'Regression'})('Login with invalid username and password', async t => {
     await loginPage.login(CREDENTIALS.INVALID.USERNAME,CREDENTIALS.INVALID.PASSWORD)
     await t.expect(loginPage.verififyErrorExists).ok('The error message was not shown.')
 })
