@@ -8,4 +8,5 @@ class MyAccount {
 async signOutButtonExists() {
     await t.expect(this.signOutButton.exists).ok('SignOut button was not found.')
 }
+
 }export default new MyAccount
